@@ -1,0 +1,33 @@
+
+<ons-page on-device-backbutton="app.navigator.popPage()" >
+
+    <ons-modal var="modal">
+        <ons-icon icon="ion-load-c" spin="true"></ons-icon>
+        <br><br>
+        Aguarde...
+    </ons-modal>
+
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+        </div>
+        <div class="center">Login WorkLife</div>
+    </ons-toolbar>
+
+
+
+    <div class="login-form content-padded" ng-controller="usuarioCtrl">
+        {{usuario.nombre}} {{usuario.apellido}}
+        <input type="email" class="text-input--underbar" placeholder="Email" ng-model="usuario.email">
+        <input type="password" class="text-input--underbar" placeholder="Password" ng-model="usuario.password">
+        <br><br>
+        <ons-button modifier="large" class="login-button" ng-click="login(usuario.email, usuario.password)">Ingresar</ons-button>
+        <br><br>
+        <ons-button modifier="quiet" class="forgot-password">Olvidaste tu clave?</ons-button>
+    </div>
+
+
+</ons-page>
+
+
+
